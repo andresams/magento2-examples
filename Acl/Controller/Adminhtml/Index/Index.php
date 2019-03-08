@@ -17,9 +17,10 @@ class Index extends \Magento\Backend\App\Action
         parent::__construct($context);
         $this->resultPageFactory = $resultPageFactory;
     }
-    
+
     public function execute()
     {
-        echo 'My Backend Controller Works!';
+        $resultPage = $this->resultPageFactory->create();
+        return $resultPage;
     }
 }
