@@ -23,4 +23,9 @@ class Index extends \Magento\Backend\App\Action
         $resultPage = $this->resultPageFactory->create();
         return $resultPage;
     }
+
+    protected function _isAllowed()
+    {
+        return $this->_authorization->isAllowed('Examples_Acl::examplechild');
+    }
 }
